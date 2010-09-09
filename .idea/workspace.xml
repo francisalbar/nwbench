@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217ff0b1-3ce5-4504-b9df-bc747ecbddca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/wants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bosses/show.html.erb" afterPath="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/wants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/want.rb" afterPath="$PROJECT_DIR$/app/models/want.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/toons/index.html.erb" afterPath="$PROJECT_DIR$/app/views/toons/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/bosses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/bosses_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/toons_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/toons_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/wings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/wings_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/toon.rb" afterPath="$PROJECT_DIR$/app/models/toon.rb" />
     </list>
     <ignored path="nwbench.iws" />
@@ -36,10 +35,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" nonProjectFilesColor="ffffe4" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="0" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.7493671">
+            <state line="84" column="0" selection-start="2466" selection-end="2466" vertical-scroll-proportion="-23.68">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wings_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/wings_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="49" selection-start="141" selection-end="141" vertical-scroll-proportion="0.077294685">
               <folding />
             </state>
           </provider>
@@ -108,15 +116,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/bosses/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="-19.2">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="toon.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/toon.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/boss.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
@@ -176,6 +174,7 @@
         <option value="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/bosses_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/toons_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/wings_controller.rb" />
       </list>
     </option>
   </component>
@@ -703,13 +702,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../nwsls/app/views/raids/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="102" selection-start="466" selection-end="495" vertical-scroll-proportion="-9.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/want.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="65" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
@@ -810,7 +802,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.7493671">
+        <state line="84" column="0" selection-start="2466" selection-end="2466" vertical-scroll-proportion="-23.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/wings_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="49" selection-start="141" selection-end="141" vertical-scroll-proportion="0.077294685">
           <folding />
         </state>
       </provider>

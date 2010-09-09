@@ -6425,3 +6425,10 @@ Started GET "/bosses" for 127.0.0.1 at 2010-09-09 01:08:08 -0700
   [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 12))
 Rendered bosses/index.html.erb within layouts/application (113.0ms)
 Completed 200 OK in 131ms (Views: 114.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/wings" for 127.0.0.1 at 2010-09-09 01:27:16 -0700
+  Processing by WingsController#index as HTML
+  [1m[36mWing Load (0.8ms)[0m  [1mSELECT "wings".* FROM "wings" ORDER BY wing_id[0m
+Rendered wings/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 43ms (Views: 16.1ms | ActiveRecord: 0.8ms)

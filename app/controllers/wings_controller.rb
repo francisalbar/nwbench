@@ -2,7 +2,7 @@ class WingsController < ApplicationController
   # GET /wings
   # GET /wings.xml
   def index
-    @wings = Wing.all
+    @wings = Wing.find(:all, :order => 'wing_id')
 
     respond_to do |format|
       format.html # index.html.erb
