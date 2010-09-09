@@ -24,10 +24,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" nonProjectFilesColor="ffffe4" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="16" selection-start="2036" selection-end="2036" vertical-scroll-proportion="-24.08">
+            <state line="32" column="80" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.6320988">
               <folding />
             </state>
           </provider>
@@ -42,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="48" selection-start="182" selection-end="182" vertical-scroll-proportion="0.1509434">
+            <state line="10" column="48" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -120,8 +120,8 @@
         <option value="$PROJECT_DIR$/app/models/want.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -721,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="16" selection-start="2036" selection-end="2036" vertical-scroll-proportion="-24.08">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/bosses_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -737,7 +730,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="48" selection-start="182" selection-end="182" vertical-scroll-proportion="0.1509434">
+        <state line="10" column="48" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="80" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.6320988">
           <folding />
         </state>
       </provider>
