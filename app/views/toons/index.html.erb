@@ -5,7 +5,6 @@
     <th>Name</th>
     <th>Role</th>
     <th>Wants</th>
-    <th></th>
   </tr>
 
 <% @toons.each do |toon| %>
@@ -13,8 +12,6 @@
     <td><%= link_to toon.name, toon %></td>
     <td><%= toon.role.name %></td>
     <td><%= toon.wants.length %></td>
-    <td><%= link_to 'Edit', edit_toon_path(toon) %></td>
-    <td><%= link_to 'Destroy', toon, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
