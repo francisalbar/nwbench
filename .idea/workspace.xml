@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217ff0b1-3ce5-4504-b9df-bc747ecbddca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/index.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/wants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bosses/show.html.erb" afterPath="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/want.rb" afterPath="$PROJECT_DIR$/app/models/want.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/toons/show.html.erb" afterPath="$PROJECT_DIR$/app/views/toons/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/_want.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/_want.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/toon.rb" afterPath="$PROJECT_DIR$/app/models/toon.rb" />
     </list>
@@ -33,10 +34,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" nonProjectFilesColor="ffffe4" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="want.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="want.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/want.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="65" selection-start="298" selection-end="298" vertical-scroll-proportion="0.1509434">
+            <state line="8" column="65" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,7 +64,34 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/wants/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="45" selection-start="733" selection-end="733" vertical-scroll-proportion="-8.156863">
+            <state line="49" column="0" selection-start="1262" selection-end="1411" vertical-scroll-proportion="-10.921569">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_want.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/wants/_want.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="-2.56">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/toons/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="8" selection-start="233" selection-end="233" vertical-scroll-proportion="-12.16">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/bosses/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="36" selection-start="331" selection-end="331" vertical-scroll-proportion="0.5180573">
               <folding />
             </state>
           </provider>
@@ -132,12 +160,9 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/toons/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/wants/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/toons/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/toons/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/bosses/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/boss.rb" />
-        <option value="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/wants/_want.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
@@ -146,6 +171,9 @@
         <option value="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/toon.rb" />
         <option value="$PROJECT_DIR$/app/models/want.rb" />
+        <option value="$PROJECT_DIR$/app/views/wants/_want.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/toons/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
       </list>
     </option>
   </component>
@@ -673,21 +701,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/wants/_want.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="85" selection-start="179" selection-end="179" vertical-scroll-proportion="-2.56" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../nwsls/app/models/attendance.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="81" selection-end="162" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zero_to_rails_3-controllers/challenge/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="124" selection-start="693" selection-end="693" vertical-scroll-proportion="0.4057971" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../zero_to_rails_3-views/challenge/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -732,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wants/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="45" selection-start="733" selection-end="733" vertical-scroll-proportion="-8.156863">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/wants_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="84" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
@@ -762,7 +768,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/want.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="65" selection-start="298" selection-end="298" vertical-scroll-proportion="0.1509434">
+        <state line="8" column="65" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wants/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1262" selection-end="1411" vertical-scroll-proportion="-10.921569">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wants/_want.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="-2.56">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/toons/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="8" selection-start="233" selection-end="233" vertical-scroll-proportion="-12.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/bosses/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="36" selection-start="331" selection-end="331" vertical-scroll-proportion="0.5180573">
           <folding />
         </state>
       </provider>
