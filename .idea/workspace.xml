@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217ff0b1-3ce5-4504-b9df-bc747ecbddca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/index.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/wants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="nwbench.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +41,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="96" selection-start="649" selection-end="649" vertical-scroll-proportion="0.39259258">
+            <state line="20" column="96" selection-start="649" selection-end="649" vertical-scroll-proportion="-12.72">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wants_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/wants_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="84" selection-start="336" selection-end="336" vertical-scroll-proportion="0.1509434">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/wants/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="45" selection-start="733" selection-end="733" vertical-scroll-proportion="-8.156863">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wants_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/wants_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="5" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/wings/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/toons/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/wants/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/toons/show.html.erb" />
@@ -97,14 +127,15 @@
         <option value="$PROJECT_DIR$/app/views/bosses/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/boss.rb" />
         <option value="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/wants/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/wants/_want.html.erb" />
         <option value="$PROJECT_DIR$/app/models/toon.rb" />
         <option value="$PROJECT_DIR$/app/models/want.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/wants/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
       </list>
     </option>
   </component>
@@ -377,6 +408,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nwbench" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nwbench" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -614,16 +663,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20100909001703_add_item_name_to_wants.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wants/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="51" selection-start="420" selection-end="445" vertical-scroll-proportion="-11.52" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/wants/_want.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="85" selection-start="179" selection-end="179" vertical-scroll-proportion="-2.56" />
@@ -647,11 +686,6 @@
     <entry file="file://$PROJECT_DIR$/../nwsls/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="27" selection-start="131" selection-end="151" vertical-scroll-proportion="0.13207547" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/wants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="4" selection-start="2090" selection-end="2090" vertical-scroll-proportion="0.6603774" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
@@ -686,6 +720,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="96" selection-start="649" selection-end="649" vertical-scroll-proportion="-12.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/wants_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../nwsls/app/views/raids/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="102" selection-start="466" selection-end="495" vertical-scroll-proportion="-9.6">
@@ -693,9 +741,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/wants/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="96" selection-start="649" selection-end="649" vertical-scroll-proportion="0.39259258">
+        <state line="27" column="45" selection-start="733" selection-end="733" vertical-scroll-proportion="-8.156863">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/wants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="84" selection-start="336" selection-end="336" vertical-scroll-proportion="0.1509434">
           <folding />
         </state>
       </provider>

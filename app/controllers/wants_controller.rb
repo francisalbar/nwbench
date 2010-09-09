@@ -1,8 +1,24 @@
 class WantsController < ApplicationController
+
+
+
   # GET /wants
   # GET /wants.xml
   def index
-    @wants = Want.all
+    if params[:itemsPerPage] then session[:itemsPerPage] = params[:itemsPerPage] end
+    if params[:page] then @page = params[:page].to_i else @page = 1 end
+    if session[:itemsPerPage] then @per = session[:itemsPerPage].to_i else @per = 15 end
+
+    @wants = Want.find(:all, :order => 'boss_id')
+    @lastpage = @wants.length/(@per) + 1
+
+    if @wants.length%(@per) == 0
+      @lastpage = @lastpage - 1
+    end
+
+    @wants = @wants[((@page-1)*@per),@per]
+    #@wants = Want.all
+    #@wants = paginate(:wants, :order => 'boss_id ASC', :per_page => 2)
 
     respond_to do |format|
       format.html # index.html.erb

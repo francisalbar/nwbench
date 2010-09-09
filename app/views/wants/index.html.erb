@@ -1,5 +1,34 @@
 <h1>Listing wants</h1>
 
+<% min = minmaxpage(@page, @lastpage, 'min') %>
+<% max = minmaxpage(@page, @lastpage, 'max') %>
+
+ <% if min < @page %>
+     <%= link_to( "Prev", :action => "index", :page => (@page - 1) ) %>
+ <% end %>
+ <% if min > 1 %>
+     <%= link_to( "1", :action => "index", :page => 1 ) %>
+ <% end %>
+ <% x = min %>
+
+<% while x <= max %>
+    <% if x.to_i == @page.to_i %>
+        <span class="current"><%= x %></span>
+    <% else %>
+        <%= link_to( x.to_s, :action => "index", :page => x ) %>
+    <% end %>
+    <% x = x+1 %>
+<% end %>
+
+<% if max < @lastpage %>
+    <%= link_to( @lastpage.to_s, :action => "index", :page => @lastpage ) %>
+<% end %>
+
+<% if max > @page %>
+    <%= link_to( "Next", :action => "index", :page => (@page + 1) ) %>
+<% end %>
+
+
 <table>
   <tr>
     <th>Toon</th>
