@@ -4867,3 +4867,46 @@ Started GET "/bosses/1" for 127.0.0.1 at 2010-09-08 23:41:09 -0700
 Rendered wants/_want.html.erb (35.0ms)
 Rendered bosses/show.html.erb within layouts/application (120.6ms)
 Completed 200 OK in 141ms (Views: 124.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bosses/1" for 127.0.0.1 at 2010-09-08 23:50:34 -0700
+  Processing by BossesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.3ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".boss_id = 1) ORDER BY player_id
+SQLite3::SQLException: no such column: player_id: SELECT     "wants".* FROM       "wants"  WHERE     ("wants".boss_id = 1) ORDER BY  player_id
+Rendered bosses/show.html.erb within layouts/application (81.2ms)
+Completed   in 101ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: player_id: SELECT     "wants".* FROM       "wants"  WHERE     ("wants".boss_id = 1) ORDER BY  player_id):
+    24:     <th></th>
+    25:     <th></th>
+    26:   </tr>
+    27:   <%= render :partial => @boss.wants.order('player_id') %>
+    28: </table>
+    29: 
+    30: <%= link_to 'Back', bosses_path %>
+  app/views/bosses/show.html.erb:27:in `_app_views_bosses_show_html_erb__2650216967506440603_2154269480_3490191064432632876'
+  app/controllers/bosses_controller.rb:18:in `show'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/bosses/1" for 127.0.0.1 at 2010-09-08 23:50:56 -0700
+  Processing by BossesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBoss Load (0.1ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.4ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".boss_id = 1) ORDER BY toon_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+Rendered wants/_want.html.erb (70.8ms)
+Rendered bosses/show.html.erb within layouts/application (144.5ms)
+Completed 200 OK in 163ms (Views: 148.0ms | ActiveRecord: 1.6ms)

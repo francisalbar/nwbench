@@ -19,7 +19,7 @@
     <th></th>
     <th></th>
   </tr>
-  <%= render :partial => @toon.wants %>
+  <%= render :partial => @toon.wants.order('boss_id') %>
 </table>
 
 <%= link_to 'Edit', edit_toon_path(@toon) %> |
