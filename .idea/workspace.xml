@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217ff0b1-3ce5-4504-b9df-bc747ecbddca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/wants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bosses/show.html.erb" afterPath="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/wants_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/wants_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/want.rb" afterPath="$PROJECT_DIR$/app/models/want.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
@@ -91,7 +91,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/bosses/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="39" selection-start="334" selection-end="334" vertical-scroll-proportion="0.5180573">
+            <state line="26" column="36" selection-start="331" selection-end="331" vertical-scroll-proportion="0.5180573">
               <folding />
             </state>
           </provider>
@@ -172,8 +172,8 @@
         <option value="$PROJECT_DIR$/app/models/toon.rb" />
         <option value="$PROJECT_DIR$/app/models/want.rb" />
         <option value="$PROJECT_DIR$/app/views/wants/_want.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/toons/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/bosses/show.html.erb" />
       </list>
     </option>
   </component>
@@ -796,7 +796,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bosses/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="39" selection-start="334" selection-end="334" vertical-scroll-proportion="0.5180573">
+        <state line="26" column="36" selection-start="331" selection-end="331" vertical-scroll-proportion="0.5180573">
           <folding />
         </state>
       </provider>
