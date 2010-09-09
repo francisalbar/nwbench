@@ -3622,3 +3622,310 @@ Started GET "/" for 127.0.0.1 at 2010-09-08 21:10:52 -0700
   [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 12))
 Rendered bosses/index.html.erb within layouts/application (130.9ms)
 Completed 200 OK in 242ms (Views: 132.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-09-08 22:54:56 -0700
+  Processing by BossesController#index as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mBoss Load (0.6ms)[0m  SELECT "bosses".* FROM "bosses"
+  [1m[36mWing Load (0.3ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.9ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 1))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 2))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 3))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 4))
+  [1m[36mWing Load (0.3ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 6))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+  [1m[35mToon Load (0.7ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 7))
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 3) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 8))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 3) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 9))
+  [1m[36mWing Load (0.3ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 4) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 10))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 4) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 11))
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 5) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 12))
+Rendered bosses/index.html.erb within layouts/application (180.3ms)
+Completed 200 OK in 344ms (Views: 181.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-08 22:55:00 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants"[0m
+  [1m[35mToon Load (0.6ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.3ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.3ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.3ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (217.5ms)
+Completed 200 OK in 239ms (Views: 221.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/wants/new" for 127.0.0.1 at 2010-09-08 22:55:05 -0700
+  Processing by WantsController#new as HTML
+ERROR: compiling _app_views_wants__form_html_erb__4311938449684372521_2170641100_2071649818073699836 RAISED /Users/francisa/Projects/Rails/nwbench/app/views/wants/_form.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+... { :include_blank => true })) );@output_buffer.safe_concat('
+...                               ^
+/Users/francisa/Projects/Rails/nwbench/app/views/wants/_form.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+... { :include_blank => true })) );@output_buffer.safe_concat('
+...                               ^
+Function body:           def _app_views_wants__form_html_erb__4311938449684372521_2170641100_2071649818073699836(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "wants/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@want) do |f| @output_buffer.safe_concat('
+');   if @want.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@want.errors.count, "error") );@output_buffer.safe_concat(' prohibited this want from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @want.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :toon );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.select(:toon_id, Toon.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true })) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div class="field">
+    ');@output_buffer.append= ( f.label :boss );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.select(:boss_id, Boss.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true })) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div class="field">
+    &nbsp;<br />
+    <i>Go to wowhead.com and look up the item you want. The URL of the item will have a 5 digit item id - put that number in this field. The name will be populated automatically and the icon will appear to verify your selection.</i><br />
+    <br />
+    ');@output_buffer.append= ( f.label :item_id );@output_buffer.safe_concat(' Id<br />
+    ');@output_buffer.append= ( f.text_field :item_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div class="field">
+    ');@output_buffer.append= ( f.label :item_name );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :item_name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    <a id="icon" class="hidden" rel=""><div id="icon-item"></div><div id="icon-chrome"></div></a>
+  </div>
+
+  <style>
+    #icon {
+        position: relative;
+        height: 68px;
+        width: 68px;
+        margin: 5px;
+        display: block;
+    }
+    #icon.hidden {
+        visibility: hidden;
+    }
+    #icon-chrome {
+        background-image: url(\'http://static.wowhead.com/images/Icon/large/border/default.png\');
+        position: absolute;
+        top:0;
+        left:0;
+        width: 68px;
+        height: 68px;
+    }
+    #icon-item {
+        position: absolute;
+        top:6px;
+        left:6px;
+        width: 56px;
+        height: 56px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    var $item_name = jQuery(\'input#want_item_name\').attr(\'readonly\', true);
+
+    jQuery(\'input#want_item_id\').bind(\'keyup\', function() {
+        var item_id = jQuery.trim( jQuery(this).val().replace(/[^0-9]/, \'\') );
+        jQuery(this).val(item_id);
+        $item_name.val(\'\');
+        jQuery(\'#icon\').addClass(\'hidden\');
+        if(item_id.length < 5) return;
+        jQuery.ajax({
+            type: \'GET\',
+            url: \'/wowhead/\' + item_id,
+            dataType: \'xml\',
+            success: function(data) {
+              //var item = eval("({" + jQuery(data).find(\'json\').text() + "})");
+              //eval(\'var json = \' + jQuery(data).find(\'json\').text() + \';\');
+              //console.log( json );
+              $item_name.val( jQuery(data).find(\'name\').text() );
+              jQuery(\'#icon-item\').css(\'background-image\', "url(\'http://static.wowhead.com/images/wow/icons/large/" + jQuery(data).find(\'icon\').text().toLowerCase() + ".jpg\')")
+              jQuery(\'#icon\').removeClass(\'hidden\').attr(\'rel\', \'item=\' + jQuery(data).find(\'item\').attr(\'id\'));
+            }
+        });
+    })
+  </script>
+
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `module_eval'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `compile'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `block in render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:294:in `render_partial'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:223:in `block in render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:221:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/partials.rb:334:in `_render_partial'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:31:in `render'
+/Users/francisa/Projects/Rails/nwbench/app/views/wants/new.html.erb:3:in `_app_views_wants_new_html_erb___1331364861350138013_2170668020_2213869814152359074'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/template.rb:135:in `block in render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/francisa/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/Users/francisa/Projects/Rails/nwbench/app/controllers/wants_controller.rb:29:in `new'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__2774196238362877433__process_action__2397550847604262770__callbacks'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `block in action'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/francisa/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/francisa/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/francisa/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered wants/_form.html.erb (17.7ms)
+Rendered wants/new.html.erb within layouts/application (20.6ms)
+Completed   in 86ms
+
+ActionView::Template::Error (/Users/francisa/Projects/Rails/nwbench/app/views/wants/_form.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+... { :include_blank => true })) );@output_buffer.safe_concat('
+...                               ^
+/Users/francisa/Projects/Rails/nwbench/app/views/wants/_form.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+... { :include_blank => true })) );@output_buffer.safe_concat('
+...                               ^):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :toon %><br />
+    16:     <%= f.select(:toon_id, Toon.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true })) %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  app/views/wants/new.html.erb:3:in `_app_views_wants_new_html_erb___1331364861350138013_2170668020_2213869814152359074'
+  app/controllers/wants_controller.rb:29:in `new'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/wants/new" for 127.0.0.1 at 2010-09-08 22:55:55 -0700
+  Processing by WantsController#new as HTML
+  [1m[36mToon Load (1.6ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mBoss Load (0.6ms)[0m  SELECT "bosses".* FROM "bosses"
+Rendered wants/_form.html.erb (154.2ms)
+Rendered wants/new.html.erb within layouts/application (162.0ms)
+Completed 200 OK in 191ms (Views: 169.1ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/wants" for 127.0.0.1 at 2010-09-08 22:56:01 -0700
+  Processing by WantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z1nD/4sTkzAYupDT3gJUVuxBhp+lMUyi9Mavw4EgVqY=", "want"=>{"toon_id"=>"", "boss_id"=>"", "item_id"=>"", "item_name"=>""}, "commit"=>"Create Want"}
+  [1m[36mToon Load (1.2ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mBoss Load (0.7ms)[0m  SELECT "bosses".* FROM "bosses"
+Rendered wants/_form.html.erb (125.1ms)
+Rendered wants/new.html.erb within layouts/application (132.9ms)
+Completed 200 OK in 210ms (Views: 139.5ms | ActiveRecord: 1.9ms)

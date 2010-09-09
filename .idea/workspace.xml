@@ -5,8 +5,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wants/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/wants/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
     </list>
     <ignored path="nwbench.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +40,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="96" selection-start="650" selection-end="650" vertical-scroll-proportion="0.39259258">
+            <state line="20" column="96" selection-start="649" selection-end="649" vertical-scroll-proportion="0.39259258">
               <folding />
             </state>
           </provider>
@@ -51,7 +49,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../nwsls/app/views/raids/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="73" selection-start="466" selection-end="495" vertical-scroll-proportion="-9.6">
+            <state line="15" column="102" selection-start="466" selection-end="495" vertical-scroll-proportion="-9.6">
               <folding />
             </state>
           </provider>
@@ -690,14 +688,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../nwsls/app/views/raids/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="73" selection-start="466" selection-end="495" vertical-scroll-proportion="-9.6">
+        <state line="15" column="102" selection-start="466" selection-end="495" vertical-scroll-proportion="-9.6">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/wants/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="96" selection-start="650" selection-end="650" vertical-scroll-proportion="0.39259258">
+        <state line="20" column="96" selection-start="649" selection-end="649" vertical-scroll-proportion="0.39259258">
           <folding />
         </state>
       </provider>
