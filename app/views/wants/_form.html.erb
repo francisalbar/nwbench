@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= f.label :toon %><br />
-    <%= f.select(:toon_id, Toon.all.collect {|a| [ a.name, a.id ] }) %>
+    <%= f.select(:toon_id, Toon.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true })) %>
   </div>
 
   <div class="field">
     <%= f.label :boss %><br />
-    <%= f.select(:boss_id, Boss.all.collect {|a| [ a.name, a.id ] }) %>
+    <%= f.select(:boss_id, Boss.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true })) %>
   </div>
 
   <div class="field">
