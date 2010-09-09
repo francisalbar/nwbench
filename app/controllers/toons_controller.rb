@@ -2,7 +2,7 @@ class ToonsController < ApplicationController
   # GET /toons
   # GET /toons.xml
   def index
-    @toons = Toon.all
+    @toons = Toon.find(:all, :order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb

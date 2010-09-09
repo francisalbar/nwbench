@@ -2,7 +2,7 @@ class BossesController < ApplicationController
   # GET /bosses
   # GET /bosses.xml
   def index
-    @bosses = Boss.all
+    @bosses = Boss.find(:all, :order => 'boss_id')
 
     respond_to do |format|
       format.html # index.html.erb

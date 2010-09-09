@@ -17,16 +17,19 @@
   </div>
 
   <div class="field">
-    <%= f.label :boss %><br />
-    <%= f.select(:boss_id, Boss.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true }) %>
-  </div>
-
-  <div class="field">
-    &nbsp;<br />
-    <i>Go to wowhead.com and look up the item you want. The URL of the item will have a 5 digit item id - put that number in this field. The name will be populated automatically and the icon will appear to verify your selection.</i><br />
-    <br />
     <%= f.label :item_id %> Id<br />
     <%= f.text_field :item_id %>
+  </div>
+
+  <p>
+    <i>Go to wowhead.com and look up the item you want. The URL of the item will have a 5 digit item id - put that number in the field above. The name will be populated automatically and the icon will appear to verify your selection. If the boss does not exist, please fill it in.</i>
+  </p>
+
+  <hr/>
+
+  <div class="field">
+    <%= f.label :boss %><br />
+    <%= f.select(:boss_id, Boss.all.collect {|a| [ a.name, a.id ] }, { :include_blank => true }) %>
   </div>
 
   <div class="field">
@@ -78,7 +81,15 @@
             url: '/wowhead/' + item_id,
             dataType: 'xml',
             success: function(data) {
-              //var item = eval("({" + jQuery(data).find('json').text() + "})");
+              var item = eval("({" + jQuery(data).find('json').text() + "})");
+
+              jQuery('#want_boss_id option').each( function() {
+                  if( jQuery.trim( jQuery(this).text() ) == jQuery.trim( item.sourcemore[0].n ) ) {
+                    jQuery(this).attr('selected', true);
+                    return false;
+                  }
+              })
+
               //eval('var json = ' + jQuery(data).find('json').text() + ';');
               //console.log( json );
               $item_name.val( jQuery(data).find('name').text() );
