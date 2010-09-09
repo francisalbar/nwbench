@@ -1,0 +1,92 @@
+<%= form_for(@want) do |f| %>
+  <% if @want.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@want.errors.count, "error") %> prohibited this want from being saved:</h2>
+
+      <ul>
+      <% @want.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :toon %><br />
+    <%= f.select(:toon_id, Toon.all.collect {|a| [ a.name, a.id ] }) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :boss %><br />
+    <%= f.select(:boss_id, Boss.all.collect {|a| [ a.name, a.id ] }) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_id %><br />
+    <%= f.text_field :item_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_name %><br />
+    <%= f.text_field :item_name %>
+
+    <a id="icon" class="hidden" rel=""><div id="icon-item"></div><div id="icon-chrome"></div></a>
+  </div>
+
+  <style>
+    #icon {
+        position: relative;
+        height: 68px;
+        width: 68px;
+        margin: 5px;
+        display: block;
+    }
+    #icon.hidden {
+        visibility: hidden;
+    }
+    #icon-chrome {
+        background-image: url('http://static.wowhead.com/images/Icon/large/border/default.png');
+        position: absolute;
+        top:0;
+        left:0;
+        width: 68px;
+        height: 68px;
+    }
+    #icon-item {
+        position: absolute;
+        top:6px;
+        left:6px;
+        width: 56px;
+        height: 56px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    var $item_name = jQuery('input#want_item_name').attr('readonly', true);
+
+    jQuery('input#want_item_id').bind('keyup', function() {
+        var item_id = jQuery.trim( jQuery(this).val().replace(/[^0-9]/, '') );
+        jQuery(this).val(item_id);
+        $item_name.val('');
+        jQuery('#icon').addClass('hidden');
+        if(item_id.length < 5) return;
+        jQuery.ajax({
+            type: 'GET',
+            url: '/wowhead/' + item_id,
+            dataType: 'xml',
+            success: function(data) {
+              //var item = eval("({" + jQuery(data).find('json').text() + "})");
+              //eval('var json = ' + jQuery(data).find('json').text() + ';');
+              //console.log( json );
+              $item_name.val( jQuery(data).find('name').text() );
+              jQuery('#icon-item').css('background-image', "url('http://static.wowhead.com/images/wow/icons/large/" + jQuery(data).find('icon').text().toLowerCase() + ".jpg')")
+              jQuery('#icon').removeClass('hidden').attr('rel', 'item=' + jQuery(data).find('item').attr('id'));
+            }
+        });
+    })
+  </script>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

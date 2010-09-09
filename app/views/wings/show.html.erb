@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Wing:</b>
+  <%= @wing.wing_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @wing.name %>
+</p>
+
+<table>
+  <tr><th>Bosses</th></tr>
+  <%= render :partial => @wing.bosses %>
+</table>
+
+<br />
+<%= link_to 'Back', wings_path %>

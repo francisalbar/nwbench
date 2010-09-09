@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Boss:</b>
+  <%= @boss.boss_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @boss.name %>
+</p>
+
+<p>
+  <b>Wing:</b>
+  <%= @boss.wing.name %>
+</p>
+
+<b>Wants</b>
+<table>
+  <tr>
+    <th>Toon</th>
+    <th>Boss</th>
+    <th>Item</th>
+  </tr>
+  <%= render :partial => @boss.wants %>
+</table>
+
+<%= link_to 'Back', bosses_path %>

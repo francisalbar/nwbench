@@ -1,0 +1,29 @@
+<h1>Listing wants</h1>
+
+<table>
+  <tr>
+    <th>Toon</th>
+    <th>Boss</th>
+    <th>Wing</th>
+    <th>Item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wants.each do |want| %>
+  <tr>
+    <td><%= link_to want.toon.name, want.toon %></td>
+    <td><%= link_to want.boss.name, want.boss %></td>
+    <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
+    <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
+    <td><%= link_to 'Show', want %></td>
+    <td><%= link_to 'Edit', edit_want_path(want) %></td>
+    <td><%= link_to 'Destroy', want, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Want', new_want_path %>

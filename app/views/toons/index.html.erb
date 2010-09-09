@@ -1,0 +1,24 @@
+<h1>Listing toons</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Wants</th>
+    <th></th>
+  </tr>
+
+<% @toons.each do |toon| %>
+  <tr>
+    <td><%= link_to toon.name, toon %></td>
+    <td><%= toon.role.name %></td>
+    <td><%= toon.wants.length %></td>
+    <td><%= link_to 'Edit', edit_toon_path(toon) %></td>
+    <td><%= link_to 'Destroy', toon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Toon', new_toon_path %>

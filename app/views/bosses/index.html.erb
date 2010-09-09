@@ -1,0 +1,20 @@
+<h1>Listing bosses</h1>
+
+<table>
+  <tr>
+    <th>Boss</th>
+    <th>Name</th>
+    <th>Wing</th>
+    <th>Toons that want</th>
+  </tr>
+
+<% @bosses.each do |boss| %>
+  <tr>
+    <td><%= boss.boss_id %></td>
+    <td><%= link_to boss.name, boss %></td>
+    <td><%= link_to boss.wing.name, boss.wing %></td>
+    <td><%= boss.toons.length %></td>
+  </tr>
+<% end %>
+</table>
+

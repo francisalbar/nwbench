@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  boss_id: 1
+  name: MyString
+  wing_id: 1
+
+two:
+  boss_id: 1
+  name: MyString
+  wing_id: 1

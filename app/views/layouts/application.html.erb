@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nwbench</title>
+  <%= stylesheet_link_tag :all %>
+  <script type="text/javascript" src="/javascripts/jquery-1.4.2.min.js"></script>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+  <script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+
+  <style>
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+          th,td {
+              border: 1px solid #ccc;
+              padding: 2px 5px;
+          }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td><%= link_to 'Wings', wings_path %></td>
+    <td><%= link_to 'Bosses', bosses_path %></td>
+    <td><%= link_to 'Toons', toons_path %></td>
+    <td><%= link_to 'Roles', roles_path %></td>
+    <td><%= link_to 'Wants', wants_path %></td>
+  </tr>
+</table>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Toon:</b>
+  <%= @want.toon.name %>
+</p>
+
+<p>
+  <b>Boss:</b>
+  <%= @want.boss.name %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @want.item_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_want_path(@want) %> |
+<%= link_to 'Back', wants_path %>

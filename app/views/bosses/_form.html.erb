@@ -1,0 +1,29 @@
+<%= form_for(@boss) do |f| %>
+  <% if @boss.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boss.errors.count, "error") %> prohibited this boss from being saved:</h2>
+
+      <ul>
+      <% @boss.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :boss_id %><br />
+    <%= f.text_field :boss_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :wing_id %><br />
+    <%= f.text_field :wing_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

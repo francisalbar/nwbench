@@ -1,0 +1,15 @@
+<h1>Listing wings</h1>
+
+<table>
+  <tr>
+    <th>Wing</th>
+    <th>Name</th>
+  </tr>
+
+<% @wings.each do |wing| %>
+  <tr>
+    <td><%= wing.wing_id %></td>
+    <td><%= link_to wing.name, wing %></td>
+  </tr>
+<% end %>
+</table>

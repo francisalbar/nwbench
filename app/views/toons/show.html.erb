@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @toon.name %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @toon.role.name %>
+</p>
+
+<b>Wants</b>
+<table>
+  <tr>
+    <th>Toon</th>
+    <th>Boss</th>
+    <th>Item</th>
+  </tr>
+  <%= render :partial => @toon.wants %>
+</table>
+
+<%= link_to 'Edit', edit_toon_path(@toon) %> |
+<%= link_to 'Back', toons_path %>
