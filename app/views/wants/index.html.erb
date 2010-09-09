@@ -42,7 +42,7 @@
 
 <% @wants.each do |want| %>
   <tr>
-    <td><%= link_to want.toon.name, want.toon %></td>
+    <td><%= link_to want.toon.name, want.toon if want.toon %><%= want.toon_id unless want.toon %></td>
     <td><%= link_to want.boss.name, want.boss %></td>
     <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
     <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>

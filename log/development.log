@@ -4958,3 +4958,809 @@ Started GET "/bosses/1" for 127.0.0.1 at 2010-09-09 00:15:27 -0700
 Rendered wants/_want.html.erb (71.9ms)
 Rendered bosses/show.html.erb within layouts/application (138.7ms)
 Completed 200 OK in 299ms (Views: 252.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bosses" for 127.0.0.1 at 2010-09-09 00:22:18 -0700
+  Processing by BossesController#index as HTML
+  [1m[35mBoss Load (0.6ms)[0m  SELECT "bosses".* FROM "bosses"
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.7ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 1))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 2))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 3))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 4))
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 5))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 6))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 7))
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 3) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 8))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 3) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 9))
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 4) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 10))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 4) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 11))
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 5) LIMIT 1[0m
+  [1m[35mToon Load (0.1ms)[0m  SELECT "toons".* FROM "toons" INNER JOIN "wants" ON "toons".id = "wants".toon_id WHERE (("wants".boss_id = 12))
+Rendered bosses/index.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 121ms (Views: 105.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:22:25 -0700
+  Processing by ToonsController#index as HTML
+  [1m[36mToon Load (0.9ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 2)[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)[0m
+Rendered toons/index.html.erb within layouts/application (82.2ms)
+Completed 200 OK in 106ms (Views: 94.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:22:33 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.6ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.4ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (126.2ms)
+Completed 200 OK in 182ms (Views: 141.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/wants/new" for 127.0.0.1 at 2010-09-09 00:22:37 -0700
+  Processing by WantsController#new as HTML
+  [1m[35mToon Load (0.9ms)[0m  SELECT "toons".* FROM "toons"
+  [1m[36mBoss Load (0.4ms)[0m  [1mSELECT "bosses".* FROM "bosses"[0m
+Rendered wants/_form.html.erb (86.7ms)
+Rendered wants/new.html.erb within layouts/application (97.4ms)
+Completed 200 OK in 165ms (Views: 152.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wowhead/50612" for 127.0.0.1 at 2010-09-09 00:22:44 -0700
+  Processing by WantsController#wowhead as XML
+  Parameters: {"item_id"=>"50612"}
+Rendered text template (0.0ms)
+Sent data  (1.2ms)
+Completed 200 OK in 113ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wants" for 127.0.0.1 at 2010-09-09 00:22:46 -0700
+  Processing by WantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "want"=>{"toon_id"=>"2", "boss_id"=>"1", "item_id"=>"50612", "item_name"=>"Legguards of Lost Hope"}, "commit"=>"Create Want"}
+  [1m[35mWant Load (0.2ms)[0m  SELECT "wants"."id" FROM "wants" WHERE ("wants"."item_id" = 50612) AND ("wants"."boss_id" = 1) AND ("wants"."toon_id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wants" ("boss_id", "created_at", "item_id", "item_name", "toon_id", "updated_at") VALUES (1, '2010-09-09 07:22:46.842849', 50612, 'Legguards of Lost Hope', 2, '2010-09-09 07:22:46.842849')[0m
+Redirected to http://localhost:3000/wants/11
+Completed 302 Found in 62ms
+
+
+Started GET "/wants/11" for 127.0.0.1 at 2010-09-09 00:22:46 -0700
+  Processing by WantsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mWant Load (0.2ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants"."id" = 11) LIMIT 1
+  [1m[36mToon Load (0.4ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 2) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+Rendered wants/show.html.erb within layouts/application (118.0ms)
+Completed 200 OK in 137ms (Views: 123.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:22:50 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.3ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.5ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.1ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (157.7ms)
+Completed 200 OK in 173ms (Views: 160.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/roles" for 127.0.0.1 at 2010-09-09 00:22:57 -0700
+  Processing by RolesController#index as HTML
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles"
+Rendered roles/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 80ms (Views: 72.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:22:59 -0700
+  Processing by ToonsController#index as HTML
+  [1m[36mToon Load (0.9ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 4) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 2)[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)[0m
+Rendered toons/index.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 93ms (Views: 81.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/toons/2" for 127.0.0.1 at 2010-09-09 00:23:06 -0700
+  Processing by ToonsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "id"=>"2"}
+  [1m[35mToon Load (0.5ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "toons" WHERE ("toons"."id" = 2)[0m
+Redirected to http://localhost:3000/toons
+Completed 302 Found in 113ms
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:23:06 -0700
+  Processing by ToonsController#index as HTML
+  [1m[35mToon Load (0.8ms)[0m  SELECT "toons".* FROM "toons"
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.3ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)
+Rendered toons/index.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 95ms (Views: 83.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:23:07 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 2) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (118.0ms)
+Completed   in 134ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    42: 
+    43: <% @wants.each do |want| %>
+    44:   <tr>
+    45:     <td><%= link_to want.toon.name, want.toon %></td>
+    46:     <td><%= link_to want.boss.name, want.boss %></td>
+    47:     <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
+    48:     <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
+  app/views/wants/index.html.erb:45:in `block in _app_views_wants_index_html_erb___3160509536800283649_2160744240_3490191064432632876'
+  app/views/wants/index.html.erb:43:in `each'
+  app/views/wants/index.html.erb:43:in `_app_views_wants_index_html_erb___3160509536800283649_2160744240_3490191064432632876'
+  app/controllers/wants_controller.rb:23:in `index'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:24:13 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.6ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.5ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.3ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.3ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.4ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (216.1ms)
+Completed 200 OK in 233ms (Views: 218.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/wants/11" for 127.0.0.1 at 2010-09-09 00:24:20 -0700
+  Processing by WantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "id"=>"11"}
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants"."id" = 11) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "wants" WHERE ("wants"."id" = 11)
+Redirected to http://localhost:3000/wants
+Completed 302 Found in 70ms
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:24:20 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.3ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.1ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (156.0ms)
+Completed 200 OK in 171ms (Views: 159.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:25:53 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.6ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.1ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.1ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (142.2ms)
+Completed 200 OK in 219ms (Views: 173.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/wants/new" for 127.0.0.1 at 2010-09-09 00:25:55 -0700
+  Processing by WantsController#new as HTML
+  [1m[36mToon Load (0.8ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mBoss Load (0.4ms)[0m  SELECT "bosses".* FROM "bosses"
+Rendered wants/_form.html.erb (85.8ms)
+Rendered wants/new.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 106ms (Views: 93.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wowhead/50612" for 127.0.0.1 at 2010-09-09 00:26:05 -0700
+  Processing by WantsController#wowhead as XML
+  Parameters: {"item_id"=>"50612"}
+Rendered text template (0.0ms)
+Sent data  (1.1ms)
+Completed 200 OK in 93ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wants" for 127.0.0.1 at 2010-09-09 00:26:07 -0700
+  Processing by WantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "want"=>{"toon_id"=>"3", "boss_id"=>"1", "item_id"=>"50612", "item_name"=>"Legguards of Lost Hope"}, "commit"=>"Create Want"}
+  [1m[36mWant Load (0.2ms)[0m  [1mSELECT "wants"."id" FROM "wants" WHERE ("wants"."item_id" = 50612) AND ("wants"."boss_id" = 1) AND ("wants"."toon_id" = 3) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wants" ("boss_id", "created_at", "item_id", "item_name", "toon_id", "updated_at") VALUES (1, '2010-09-09 07:26:07.493151', 50612, 'Legguards of Lost Hope', 3, '2010-09-09 07:26:07.493151')
+Redirected to http://localhost:3000/wants/12
+Completed 302 Found in 61ms
+
+
+Started GET "/wants/12" for 127.0.0.1 at 2010-09-09 00:26:07 -0700
+  Processing by WantsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mWant Load (0.2ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants"."id" = 12) LIMIT 1[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+Rendered wants/show.html.erb within layouts/application (119.1ms)
+Completed 200 OK in 137ms (Views: 123.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:26:11 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.5ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.4ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.5ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.1ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.1ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (186.0ms)
+Completed 200 OK in 201ms (Views: 188.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:26:14 -0700
+  Processing by ToonsController#index as HTML
+  [1m[36mToon Load (0.8ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.1ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)[0m
+Rendered toons/index.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 92ms (Views: 79.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/toons/3" for 127.0.0.1 at 2010-09-09 00:26:17 -0700
+  Processing by ToonsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "id"=>"3"}
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "toons" WHERE ("toons"."id" = 3)[0m
+Redirected to http://localhost:3000/toons
+Completed 302 Found in 69ms
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:26:17 -0700
+  Processing by ToonsController#index as HTML
+  [1m[35mToon Load (0.7ms)[0m  SELECT "toons".* FROM "toons"
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.3ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)
+Rendered toons/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 93ms (Views: 52.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:26:19 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (145.1ms)
+Completed   in 160ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    42: 
+    43: <% @wants.each do |want| %>
+    44:   <tr>
+    45:     <td><%= link_to want.toon.name, want.toon if want.toon %><%= '?' << want.toon.name unless want.toon %></td>
+    46:     <td><%= link_to want.boss.name, want.boss %></td>
+    47:     <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
+    48:     <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
+  app/views/wants/index.html.erb:45:in `block in _app_views_wants_index_html_erb___3160509536800283649_2154788440_3490191064432632876'
+  app/views/wants/index.html.erb:43:in `each'
+  app/views/wants/index.html.erb:43:in `_app_views_wants_index_html_erb___3160509536800283649_2154788440_3490191064432632876'
+  app/controllers/wants_controller.rb:23:in `index'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:26:58 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.8ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.5ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.3ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (197.6ms)
+Completed   in 219ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    42: 
+    43: <% @wants.each do |want| %>
+    44:   <tr>
+    45:     <td><%= link_to want.toon.name, want.toon if want.toon %><%= want.toon.name unless want.toon %></td>
+    46:     <td><%= link_to want.boss.name, want.boss %></td>
+    47:     <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
+    48:     <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
+  app/views/wants/index.html.erb:45:in `block in _app_views_wants_index_html_erb___3160509536800283649_2160380900_3490191064432632876'
+  app/views/wants/index.html.erb:43:in `each'
+  app/views/wants/index.html.erb:43:in `_app_views_wants_index_html_erb___3160509536800283649_2160380900_3490191064432632876'
+  app/controllers/wants_controller.rb:23:in `index'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.2ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:27:37 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.7ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (157.3ms)
+Completed   in 179ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    42: 
+    43: <% @wants.each do |want| %>
+    44:   <tr>
+    45:     <td><%= link_to want.toon.name, want.toon if want.toon %><%= unless want.toon then want.toon.name end %></td>
+    46:     <td><%= link_to want.boss.name, want.boss %></td>
+    47:     <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
+    48:     <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
+  app/views/wants/index.html.erb:45:in `block in _app_views_wants_index_html_erb___3160509536800283649_2153839800_3490191064432632876'
+  app/views/wants/index.html.erb:43:in `each'
+  app/views/wants/index.html.erb:43:in `_app_views_wants_index_html_erb___3160509536800283649_2153839800_3490191064432632876'
+  app/controllers/wants_controller.rb:23:in `index'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.7ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.1ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:27:57 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.6ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.4ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.3ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (188.8ms)
+Completed   in 207ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    43: <% @wants.each do |want| %>
+    44:   <tr>
+    45:     <td><%= link_to want.toon.name, want.toon if want.toon %>
+    46:       <%= unless want.toon then want.toon.name end %></td>
+    47:     <td><%= link_to want.boss.name, want.boss %></td>
+    48:     <td><%= link_to want.boss.wing.name, want.boss.wing %></td>
+    49:     <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
+  app/views/wants/index.html.erb:46:in `block in _app_views_wants_index_html_erb___3160509536800283649_2154553140_3490191064432632876'
+  app/views/wants/index.html.erb:43:in `each'
+  app/views/wants/index.html.erb:43:in `_app_views_wants_index_html_erb___3160509536800283649_2154553140_3490191064432632876'
+  app/controllers/wants_controller.rb:23:in `index'
+
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/francisa/.rvm/gems/ruby-1.9.2-rc2@sony/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:28:47 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.6ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.3ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.3ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.3ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.3ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (218.4ms)
+Completed 200 OK in 238ms (Views: 221.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:29:22 -0700
+  Processing by ToonsController#index as HTML
+  [1m[36mToon Load (0.7ms)[0m  [1mSELECT "toons".* FROM "toons"[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1
+  [1m[36mWant Load (0.2ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)[0m
+Rendered toons/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 92ms (Views: 49.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/toons/new" for 127.0.0.1 at 2010-09-09 00:29:26 -0700
+  Processing by ToonsController#new as HTML
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles"
+Rendered toons/_form.html.erb (27.3ms)
+Rendered toons/new.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 93ms (Views: 79.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/toons" for 127.0.0.1 at 2010-09-09 00:29:42 -0700
+  Processing by ToonsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "toon"=>{"toon_id"=>"3", "name"=>"Grimtar", "role_id"=>"2"}, "commit"=>"Create Toon"}
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons"."id" FROM "toons" WHERE ("toons"."name" = 'Grimtar') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "toons" ("created_at", "name", "role_id", "toon_id", "updated_at") VALUES ('2010-09-09 07:29:42.744371', 'Grimtar', 2, 3, '2010-09-09 07:29:42.744371')
+Redirected to http://localhost:3000/toons/5
+Completed 302 Found in 59ms
+
+
+Started GET "/toons/5" for 127.0.0.1 at 2010-09-09 00:29:42 -0700
+  Processing by ToonsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 5) LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1
+  [1m[36mWant Load (0.3ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 5) ORDER BY boss_id[0m
+Rendered collection (0.0ms)
+Rendered toons/show.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 95ms (Views: 81.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:29:45 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.6ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.4ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.1ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (159.2ms)
+Completed 200 OK in 203ms (Views: 162.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:30:08 -0700
+  Processing by ToonsController#index as HTML
+  [1m[35mToon Load (0.7ms)[0m  SELECT "toons".* FROM "toons"
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.3ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 5)
+Rendered toons/index.html.erb within layouts/application (76.9ms)
+Completed 200 OK in 93ms (Views: 80.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/toons/5/edit" for 127.0.0.1 at 2010-09-09 00:30:13 -0700
+  Processing by ToonsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mToon Load (0.1ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 5) LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles"
+Rendered toons/_form.html.erb (28.1ms)
+Rendered toons/edit.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 134ms (Views: 120.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/toons/5" for 127.0.0.1 at 2010-09-09 00:30:19 -0700
+  Processing by ToonsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "toon"=>{"id"=>"3", "name"=>"Grimtar", "role_id"=>"2"}, "commit"=>"Update Toon", "id"=>"5"}
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 5) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: id
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons"."id" FROM "toons" WHERE ("toons"."name" = 'Grimtar') AND ("toons".id <> 5) LIMIT 1
+Redirected to http://localhost:3000/toons/5
+Completed 302 Found in 24ms
+
+
+Started GET "/toons/5" for 127.0.0.1 at 2010-09-09 00:30:19 -0700
+  Processing by ToonsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 5) LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1
+  [1m[36mWant Load (0.2ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 5) ORDER BY boss_id[0m
+Rendered collection (0.0ms)
+Rendered toons/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 87ms (Views: 73.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:30:21 -0700
+  Processing by WantsController#index as HTML
+  [1m[35mWant Load (0.6ms)[0m  SELECT "wants".* FROM "wants" ORDER BY boss_id
+  [1m[36mToon Load (0.4ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mWing Load (0.2ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mToon Load (0.2ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.1ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1
+  [1m[36mWing Load (0.1ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1[0m
+Rendered wants/index.html.erb within layouts/application (186.8ms)
+Completed 200 OK in 202ms (Views: 189.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/toons" for 127.0.0.1 at 2010-09-09 00:30:30 -0700
+  Processing by ToonsController#index as HTML
+  [1m[35mToon Load (0.7ms)[0m  SELECT "toons".* FROM "toons"
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.3ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 1) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 4)
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE ("roles"."id" = 2) LIMIT 1[0m
+  [1m[35mWant Load (0.1ms)[0m  SELECT "wants".* FROM "wants" WHERE ("wants".toon_id = 5)
+Rendered toons/index.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 93ms (Views: 80.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:30:34 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.1ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (159.7ms)
+Completed 200 OK in 175ms (Views: 162.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:30:49 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.8ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.5ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.3ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.4ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (27.6ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (203.0ms)
+Completed 200 OK in 264ms (Views: 180.7ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:30:58 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.5ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mToon Load (0.2ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.1ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (160.2ms)
+Completed 200 OK in 175ms (Views: 163.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/wants/12" for 127.0.0.1 at 2010-09-09 00:31:04 -0700
+  Processing by WantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6eH3ZG3gpcmfbcvyck9mYa5pqU2ULoXK6c2VzPQoMiQ=", "id"=>"12"}
+  [1m[36mWant Load (0.2ms)[0m  [1mSELECT "wants".* FROM "wants" WHERE ("wants"."id" = 12) LIMIT 1[0m
+  [1m[35mSQL (117.5ms)[0m  DELETE FROM "wants" WHERE ("wants"."id" = 12)
+Redirected to http://localhost:3000/wants
+Completed 302 Found in 229ms
+
+
+Started GET "/wants" for 127.0.0.1 at 2010-09-09 00:31:04 -0700
+  Processing by WantsController#index as HTML
+  [1m[36mWant Load (0.6ms)[0m  [1mSELECT "wants".* FROM "wants" ORDER BY boss_id[0m
+  [1m[35mToon Load (0.4ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mWing Load (0.2ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1[0m
+  [1m[35mBoss Load (0.2ms)[0m  SELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "wings".* FROM "wings" WHERE ("wings"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "toons".* FROM "toons" WHERE ("toons"."id" = 1) LIMIT 1
+  [1m[36mBoss Load (0.2ms)[0m  [1mSELECT "bosses".* FROM "bosses" WHERE ("bosses"."id" = 7) LIMIT 1[0m
+  [1m[35mWing Load (0.1ms)[0m  SELECT "wings".* FROM "wings" WHERE ("wings"."id" = 2) LIMIT 1
+Rendered wants/index.html.erb within layouts/application (211.2ms)
+Completed 200 OK in 228ms (Views: 214.9ms | ActiveRecord: 2.0ms)

@@ -1,5 +1,5 @@
 <tr>
-  <td><%= want.toon.name %></td>
+  <td><%= want.toon.name if want.toon %><%= want.toon_id unless want.toon %></td>
   <td><%= want.boss.name %></td>
   <td><a href="#" rel="item=<%= want.item_id %>"><%= want.item_name %> :: <%= want.item_id %></a></td>
   <td><%= link_to 'Edit', edit_want_path(want) %></td>
